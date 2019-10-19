@@ -1,16 +1,17 @@
 class Person
-  def initialize(first_name, last_name, id)
-	@first_name = first_name
-	@last_name = last_name
-	@id = id
-  end
-  def printPerson()
-	print("Name: ",@lastName , ", " + @firstName ,"\nID: " , @id)
-  end
+	def initialize(firstName, lastName, id)
+		@firstName = firstName
+		@lastName = lastName
+		@id = id
+	end
+	def printPerson()
+		print("Name: ",@lastName , ", " + @firstName ,"\nID: " , @id)
+	end
 end
 
 class Student <Person
     #   Class Constructor
+    #   
     #   Parameters:
     #   firstName - A string denoting the Person's first name.
     #   lastName - A string denoting the Person's last name.
