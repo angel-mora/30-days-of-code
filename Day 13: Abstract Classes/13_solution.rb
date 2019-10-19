@@ -41,7 +41,6 @@ class MyBook < Book
         # puts "Author: " + @author
         # puts "Price:" + @price
     end
-
 end
 
 title = gets
