@@ -2,7 +2,8 @@
 class Solution
     def initialize
         @stack = []
-        @queue = []
+        # @queue = []
+        @queue = Queue.new
     end
 
     def push_character(char)
@@ -14,11 +15,13 @@ class Solution
     end
 
     def pop_character
-        @stack.last
+        # @stack.last
+        @stack.pop
     end
 
     def  dequeue_character
-        @queue.first
+        # @queue.first
+        @queue.pop
     end
 end
 
