@@ -20,15 +20,34 @@ class Solution
         end
         return root
     end
+    
+    # first draft solution
+    # def levelOrder(root)
+    # queue = [root]
+    #     while queue != 0
+    #         current = queue[0]
+    #         queue = queue[-1] # only return the first
+    #         print current.data.to_s
+    #     end
+    #         [levelOrder(root.left), levelOrder(root.right)] if root.nil?
+    # end
 
     def levelOrder(root)
-    queue = [root]
-        while queue != 0
-            current = queue[0]
-            queue = queue[-1] # only return the first
-            print current.data.to_s
+        if root != nil
+          queue = [root]
+        else
+          queue = []
         end
-            [levelOrder(root.left), levelOrder(root.right)] if root.nil?
+        while queue != []
+            node = queue.pop
+            print "#{node.data} "
+            if node.left != nil
+                queue.insert(0,node.left)
+            end
+            if node.right != nil
+            queue.insert(0,node.right)
+            end
+        end
     end
 end
 
